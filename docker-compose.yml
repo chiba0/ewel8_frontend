@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8098:8080"
+    volumes:
+      - ".:/projects"
+    tty: true
