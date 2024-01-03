@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import Keycloak from "keycloak-js";
+
+const keycloak = new Keycloak({
+  url: "http://localhost:8880/",
+  realm: "test",
+  clientId: "account",
+});
+
+let isLogin = ref(false);
+keycloak
+  .init({ onLoad: "login-required", checkLoginIframe: false })
+  .then((authenticated) => (isLogin.value = authenticated))
+  .catch((e) => console.error(e));
+
+const logout = () => keycloak.logout({ redirectUri: "http://localhost:8080/" });
+</script>
 <template>
   <v-app style="min-width: 1200px">
     <v-app-bar color="primary" density="compact">
@@ -8,7 +26,7 @@
       <p class="mb-0 mr-2 text-caption">
         管理システム<br />
         <a href="">HOME</a> |
-        <a href="">ログアウト</a>
+        <button @click="logout">ログアウト</button>
       </p>
     </v-app-bar>
     <v-main class="justify-center">
