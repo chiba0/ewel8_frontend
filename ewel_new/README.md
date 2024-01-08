@@ -1,6 +1,6 @@
-# keycloak の実行
+# keycloak サンプルの実行(テスト用)
 
-# 管理画面
+# 管理画面(テスト用)
 
 chiba@chiba:~/keycloak$ docker run -p 8880:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.3 start-dev
 
@@ -9,7 +9,7 @@ chiba@chiba:~/keycloak$ docker run -p 8880:8080 -e KEYCLOAK_ADMIN=admin -e KEYCL
 - ID/PW
   admin/admin
 
-# 管理画面
+# 管理画面(テスト用)
 
 http://localhost:8880/admin/master/console/#/test
 
