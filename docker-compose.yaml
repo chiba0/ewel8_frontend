@@ -9,6 +9,6 @@ services:
       - NODE_ENV=development
     volumes:
     - ./vueApp:/usr/src/app
-    command: sh -c "cd vue-sample && npm run serve"
+    command: sh -c "cd vue-sample && yarn run serve"
     ports:
     - "18080:8080"
