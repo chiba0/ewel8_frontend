@@ -5,7 +5,7 @@ import Keycloak from "keycloak-js";
 const keycloak = new Keycloak({
   url: "http://localhost:8880",
   realm: "test",
-  clientId: "account",
+  clientId: "demo-client",
 });
 
 let isLogin = ref(false);

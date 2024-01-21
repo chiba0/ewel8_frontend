@@ -6,16 +6,20 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "axios": "^1.6.5",
     "core-js": "^3.8.3",
     "keycloak-js": "^23.0.4",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
+    "vue-axios": "^3.5.2",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3",
+    "vuejs-logger": "^1.5.5",
     "vuetify": "^3.0.0-beta.0",
     "vuex": "^4.0.0",
     "webfontloader": "^1.0.0"
